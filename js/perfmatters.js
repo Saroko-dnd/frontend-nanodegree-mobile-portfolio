@@ -1,14 +1,6 @@
 // Measuring the Critical Rendering Path with Navigation Timing
 // https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp
 
-window.onload = SetNewMediaForLink;
-
-function SetNewMediaForLink ()
-{
-    document.getElementById('LinkWithWrongMedia').media = 'all';
-    document.getElementById('GoogleFontsStyleSheet').media = 'all';
-}
-
 function logCRP() {
   var t = window.performance.timing,
     dcl = t.domContentLoadedEventStart - t.domLoading,
